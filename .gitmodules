@@ -1,0 +1,6 @@
+[submodule "trans-frontend"]
+	path = trans-frontend
+	url = git@github.com:trans-itf/trans-frontend
+[submodule "trans-backend"]
+	path = trans-backend
+	url = git@github.com:trans-itf/trans-backend

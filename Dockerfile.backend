@@ -1,0 +1,18 @@
+FROM python:3.13-alpine
+
+WORKDIR /app
+
+# install python dependencies
+COPY trans-backend/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# install fonts
+RUN apk add --no-cache git
+RUN git clone https://github.com/rayshan/mplus-fonts.git /tmp/mplus-fonts 
+RUN cp -r /tmp/mplus-fonts/fonts /app/fonts && \
+    rm -rf /tmp/mplus-fonts 
+
+COPY trans-backend/ /app/
+
+EXPOSE 8000
+CMD ["gunicorn", "-c", "gunicorn.conf.py"]
