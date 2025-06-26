@@ -40,7 +40,8 @@ $ docker compose up -d
 ```
 
 
-## backendの環境変数・gcpのkeyの設定が必要
-Dockerfile.backendと同じ階層に、以下2つのファイルを配置してください
+## backendの環境変数・GCPのkeyの設定
+Dockerfile.backendと同じ階層に、以下2つのファイルを配置してください。
 - key.json
+  - Google Cloud の認証情報ファイル
 - .env(OPENAI_API_KEY=<APIキー> と記載)  
