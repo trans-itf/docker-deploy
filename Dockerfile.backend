@@ -4,6 +4,11 @@ WORKDIR /app
 
 # install python dependencies
 COPY trans-backend/requirements.txt .
+
+# key and environmental variable
+COPY key.json .
+COPY .env . 
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 # install fonts

@@ -1,5 +1,6 @@
 # docker-deploy
 
+
 このリポジトリは、フロントエンドとバックエンドを本番環境にデプロイするための設定を提供します。
 各コンポーネントは git submodule として管理されており、Docker Compose を使用して統合された本番環境を構築します。
 
@@ -22,6 +23,7 @@ $ git clone --recurse-submodules https://github.com/trans-itf/docker-deploy.git
 $ git submodule update --init --recursive
 ```
 
+
 ## SSL証明書の設定
 
 `nginx/certs/`に以下のファイルを配置してください。
@@ -36,3 +38,9 @@ $ git submodule update --init --recursive
 $ docker compose build
 $ docker compose up -d
 ```
+
+
+## backendの環境変数・gcpのkeyの設定が必要
+Dockerfile.backendと同じ階層に、以下2つのファイルを配置してください
+- key.json
+- .env(OPENAI_API_KEY=<APIキー> と記載)  
