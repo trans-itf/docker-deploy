@@ -30,7 +30,7 @@ $ git submodule update --init --recursive
 
 - `server.cert.pem`: SSL証明書
 - `server.key.pem`: SSL秘密鍵
--  `root_and_intermediate.pem`: 中間証明書とルート証明書を結合したファイル
+- `root_plus_intermediates.cert.pem`: 中間証明書とルート証明書を結合したファイル
 
 
 ## backendの環境変数・GCPのkeyの設定
