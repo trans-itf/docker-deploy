@@ -20,7 +20,8 @@
 
 ```
 $ git clone --recurse-submodules https://github.com/trans-itf/docker-deploy.git
-$ git submodule update --init --recursive
+$ cd docker-deploy
+$ git submodule update --remote
 ```
 
 
@@ -35,9 +36,9 @@ $ git submodule update --init --recursive
 
 ## backendの環境変数・GCPのkeyの設定
 Dockerfile.backendと同じ階層に、以下2つのファイルを配置してください。
-- key.json
+- `key.json`
   - Google Cloud の認証情報ファイル
-- .env(OPENAI_API_KEY=<APIキー> と記載)  
+- `.env`(OPENAI_API_KEY=<APIキー> と記載)  
 
 
 ## 🐳 Docker を使用した本番環境の構築
